@@ -2,5 +2,3 @@
 *.pyo
 __pycache__/
 *.o
-data/*.txt
-bin/*.out
