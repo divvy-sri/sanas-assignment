@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
     std::cout << "\n";
   }
 
-  std::string output_filename = "cpp_output.txt";
+  std::string output_filename = "data/cpp_output.txt";
   std::ofstream output_file(output_filename);
   if (output_file.is_open()) {
     for (auto& row : output) {
