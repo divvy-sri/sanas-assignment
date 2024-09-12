@@ -14,7 +14,6 @@ class Linear(nn.Module):
 
     def Forward(self,input):
         normalized_input = self.normalizeInput(input)
-        # print(normalized_input)
         output = self.Linear(normalized_input)
         return output
 

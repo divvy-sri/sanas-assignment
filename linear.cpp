@@ -20,6 +20,7 @@ public:
          std::vector<std::vector<double>> bias)
       : input_dim(input_dim), output_dim(output_dim), weights(weights),
         bias(bias) {}
+  ~Linear() = default;
 
   std::vector<std::vector<double>>
   normalizeInput(std::vector<std::vector<double>> &input) {
@@ -117,8 +118,8 @@ int main(int argc, char **argv) {
   std::string output_filename = "data/cpp_output.txt";
   std::ofstream output_file(output_filename);
   if (output_file.is_open()) {
-    for (auto& row : output) {
-      for (auto& num : row) {
+    for (auto &row : output) {
+      for (auto &num : row) {
         output_file << num << " ";
       }
       output_file << "\n";

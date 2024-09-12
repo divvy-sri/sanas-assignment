@@ -34,7 +34,7 @@ np.savetxt('data/bias.txt', bias.numpy())
 # Forward pass with pytorch
 model = Linear(input_dim,output_dim,weights=weights,bias=bias)
 pytorch_output = model.Forward(input)
-print("Pytorch output:",pytorch_output)
+print("Pytorch output:\n",pytorch_output)
 
 #Forward pass with c++
 subprocess.run(["./bin/linear.out", "data/weights.txt","data/bias.txt", "data/input.txt"]) 
@@ -45,6 +45,6 @@ cpp_output = torch.from_numpy(np.loadtxt("data/cpp_output.txt", dtype=np.double)
 
 #Compare the outputs
 if torch.allclose(pytorch_output, cpp_output, atol=1e-6):
-    print("Outputs are close!")
+    print("\nOutputs are close!\n")
 else:
-    print("Outputs differ!")
+    print("\nOutputs differ!\n")
