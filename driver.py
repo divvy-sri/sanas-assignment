@@ -1,4 +1,3 @@
-import random
 import torch.random
 import subprocess
 from Linear import Linear
@@ -11,8 +10,6 @@ parser.add_argument('input_dim', help='Input dimensions',type=int)
 parser.add_argument('output_dim', help='Ouput dimensions',type=int)
 parser.add_argument('seed', help='Seed for random number generation',type=int)
 args = parser.parse_args()
-
-# parser.add
 
 # Parameters
 input_dim = args.input_dim

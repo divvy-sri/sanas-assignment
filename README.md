@@ -15,7 +15,7 @@ Now, do the same implementation using C++ and assert the results from Pytorch an
 
 ## 
 
-My implementation is tested on ubuntu 20, with python version 3.10.12, and g++ compiler version 11.4.0.
+My implementation is tested on ubuntu 22.04.4 LTS with python version 3.10.12, and g++ compiler version 11.4.0.
 
 I would create a virtual environment to run this assignment. Install virtualenv.
 
