@@ -11,7 +11,7 @@ class Linear(nn.Module):
             self.Linear.weight = torch.nn.Parameter(weights)
             self.Linear.bias = torch.nn.Parameter(bias)
 
-    def Forward(self,input):
+    def forward(self,input):
         normalized_input = self.normalizeInput(input)
         output = self.Linear(normalized_input)
         return output

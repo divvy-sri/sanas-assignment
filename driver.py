@@ -30,11 +30,11 @@ np.savetxt('data/bias.txt', bias.numpy())
 
 # Forward pass with pytorch
 model = Linear(input_dim,output_dim,weights=weights,bias=bias)
-pytorch_output = model.Forward(input)
+pytorch_output = model(input)
 print("Pytorch output:\n",pytorch_output)
 
 #Forward pass with c++
-subprocess.run(["./bin/linear.out", "data/weights.txt","data/bias.txt", "data/input.txt"]) 
+subprocess.run(["./build/LinearMain", "data/weights.txt","data/bias.txt", "data/input.txt"]) 
 
 #Load c++ output
 cpp_output = torch.from_numpy(np.loadtxt("data/cpp_output.txt", dtype=np.double))
